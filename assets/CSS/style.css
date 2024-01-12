@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto auto 1fr;
+    grid-template-areas:
+    "aside"
+    "nav"
+    "main"
+    "footer";
+    }
+
+nav {
+    grid-area: nav;
+}
+
+.filtro {
+    text-align: center;
+    background-color: antiquewhite;
+    padding-bottom: 20px;
+}
+
+.filtro select {
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 10px 8px;
+    border: none;
+    background-color: white;
+}
+
+
+aside {
+    background: #eed3b5;
+    grid-area: aside;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside img {
+    width: 60px;
+    height: 60px;
+    padding: 10px 8px;
+}
+
+aside i {
+    font-size: 25px;
+    padding-right: 8px;
+    cursor: pointer;
+}
+
+aside ul {
+    justify-content: start;
+    align-items: start;
+    display: none;
+}
+
+aside ul li {
+    list-style: none;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+main {
+    background:antiquewhite;
+    grid-area: main;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    height: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+}
+
+.card img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px 5px 0px 0px;
+    background-color: white;
+}
+
+.info {
+    background-color: #996A52;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: white;
+}
+
+section {
+    grid-area: section;
+}
+
+footer {
+    background: #ceb598;
+    grid-area: footer;
+    color: #473829;
+}
+
+@media (min-width: 576px) {
+    .contenedor {
+        grid-template-areas:
+        "aside nav"
+        "aside main"
+        "footer main"
+        "footer section";
+
+    grid-template-columns: 2.3fr 5fr;
+    grid-template-rows: auto 5fr auto auto;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .card {
+        width: 18rem;
+        margin-bottom: 30px;
+        margin: 0px 33px;
+        margin-bottom: 30px;
+    }
+
+    aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    }
+
+    aside img {
+        width: 70%;
+        height: 150px;
+    }
+
+    aside i {
+        display: none !important;
+    }
+
+    aside ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .contenedor {
+        grid-template-areas:
+        "aside nav"
+        "aside main"
+        "footer main"
+        "footer section";
+
+    grid-template-columns: 15rem 5fr;
+    grid-template-rows: auto 5fr auto auto;
+    }
+
+
+}
+
