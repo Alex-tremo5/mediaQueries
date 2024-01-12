@@ -139,7 +139,11 @@ footer {
     grid-area: footer;
     color: white;
     height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 @media (min-width: 576px) {
     .contenedor {
@@ -185,6 +189,10 @@ footer {
     aside ul {
         display: flex;
         flex-direction: column;
+    }
+
+    footer {
+        font-size: 11px;
     }
 }
 
